@@ -28,6 +28,17 @@ Technology stack:
 * Slick 3
 * H2 in-memory database
 
+## Running tests
+The following commands can be used to run tests:
+* `sbt test`: Run all tests one time
+* `sbt "~testOnly <class-matcher>"`: Run all tests for spec classes matching the given `<class-matcher`. For example, to run
+the `RestServiceSpec` tests in watch-mode, run `sbt "~testOnly *RestServiceSpec"` or `sbt "~testOnly org.example.service.RestServiceSpec"`
+
+## Running the API server
+The following commands can be used to run the API server:
+* `sbt run`: Run the API
+* `sbt ~reStart`: Run the API in watch mode; changes will be live-reloaded as you are developing
+
 ### TODO
 
 * Enable Swagger
